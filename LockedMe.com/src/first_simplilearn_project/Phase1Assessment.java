@@ -1,6 +1,7 @@
 package first_simplilearn_project;
 
 import java.io.File;
+import java.io.FilenameFilter;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -28,10 +29,13 @@ public class Phase1Assessment {
 	        	 
 	         
 	         void mainfirstopt() {
-	        	 Arrays.sort(file.list());
-	 			for(String i: file.list()) {
-	 				System.out.println(i);}
-	         }
+	        	
+	        		 Arrays.sort(file.list());
+	 	 			for(String i: file.list()) {
+	 	 				System.out.println(i);}
+	        	 }
+	        
+	         
 	         void submenu(){
 	        	 System.out.println();
 	        	System.out.println("Enter '1' to add a file to directory");
@@ -53,7 +57,7 @@ public class Phase1Assessment {
 				 File ob1=new File("c:\\start\\"+sc.next());
 				 boolean bl= ob1.delete();
 				 if(bl) {
-					 System.out.println("File deleted");
+					 System.out.println("File deleted successfully");
 					 ob1.delete();}
 				 else {
 					 System.out.println("File not found!");}
@@ -63,9 +67,9 @@ public class Phase1Assessment {
 			      File ob2=new File("c:\\start\\"+sc.next());
 			      boolean bl= ob2.exists();
 			      if(bl) {
-			    	  System.out.println("Yes! the file exists");
+			    	  System.out.println("Yes! The file is in the directory");
 			      }else {
-			    	  System.out.println("File does not exists!");}
+			    	  System.out.println("The file is not in the directory");}
 	         }
 	         
 	         
@@ -100,14 +104,17 @@ public class Phase1Assessment {
 		        	    	
 		        	    	break;
 		        	    }else {
-		        	    	System.out.println("You have entered a wrong input!");
+		        	    	System.out.println("Wrong input!");
+		        	    	System.out.println("Please provide a valid input");
 		        	    }
 		        	    }
 		         }else if(a==3) {
 		        	 System.out.println("Thank you for using LockedMe.com");
 		        	 break;
 		         }else {
-		        	 System.out.println("Wrong input!");}
+		        	 System.out.println("Wrong input!");
+		        	 System.out.println("Please provide a valid input");
+		         }
 		         
 		         }
 

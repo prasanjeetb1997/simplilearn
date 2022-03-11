@@ -1,7 +1,6 @@
 package first_simplilearn_project;
 
-import java.io.File;
-import java.io.FilenameFilter;
+import java.io.File; 
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -51,6 +50,9 @@ public class Phase1Assessment {
 					boolean bl= ob.createNewFile();
 					if(bl) {
 						System.out.println("File created successfully");}
+					else {
+						System.out.println("This file name is already present in directory");
+					}
 	         }
 	         void sub2ndopt() {
 	        	 System.out.println("Name the file you want to delete");
